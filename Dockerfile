@@ -6,6 +6,8 @@ COPY ./main.py /opt
 COPY config.json /opt
 COPY data.json /opt
 
+RUN apk add --no-cache libssl-dev
+
 RUN pip install python-telegram-bot --upgrade
 
 CMD ["python3", "main.py"]
