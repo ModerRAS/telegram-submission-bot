@@ -3,7 +3,8 @@ FROM python:rc-alpine
 WORKDIR /opt
 
 COPY ./main.py /opt
-COPY *.json /opt
+COPY config.json /opt
+COPY data.json /opt
 
 RUN pip install python-telegram-bot --upgrade
 
