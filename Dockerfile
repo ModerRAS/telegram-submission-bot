@@ -6,7 +6,7 @@ COPY ./main.py /opt
 COPY config.json /opt
 COPY data.json /opt
 
-RUN apk add --no-cache libressl-dev build-base
+RUN apk add --no-cache libressl-dev build-base libffi-dev
 
 RUN pip install python-telegram-bot --upgrade
 
